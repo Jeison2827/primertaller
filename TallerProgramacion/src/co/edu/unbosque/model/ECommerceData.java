@@ -103,7 +103,7 @@ public class ECommerceData {
 
 	@Override
 	public String toString() {
-		return "ECommerceData [invoiceNo=" + invoiceNo + ", stockCode=" + stockCode + ", description=" + description
+		return " [invoiceNo=" + invoiceNo + ", stockCode=" + stockCode + ", description=" + description
 				+ ", quantity=" + quantity + ", invoiceDate=" + invoiceDate + ", unitPrice=" + unitPrice
 				+ ", customerID=" + customerID + ", country=" + country + "]";
 	}

@@ -51,15 +51,17 @@ public class CSVFile {
 			ex.printStackTrace();
 		}
 	}
+	
+	// Este metodo permite realizar la suma total de las ventas del archivo csv
 		public double SumaTotales() {
 
 
 	        double Total = 0;
 	        for (int i=0; i<commerceDataList.size();i++) {
 
-	        	ECommerceData aux = commerceDataList.get(i);
-	            double cantidad = Double.parseDouble(aux.getQuantity()) ;
-	            double precio = Double.parseDouble(aux.getUnitPrice());
+	        	ECommerceData producto = commerceDataList.get(i);
+	            double cantidad = Double.parseDouble(producto.getQuantity()) ;
+	            double precio = Double.parseDouble(producto.getUnitPrice());
 
 
 
@@ -68,9 +70,41 @@ public class CSVFile {
 	        }
 
 	        return Total;
-
+		}
 		
-	}
+		
+		// Este metodo permite realizar la busqueda de un recibo en especifico e imprime todos los objetos contenidos en el recibo
+		public String BuscarRecibo(String invoiceNo) {
+	        String recibo = "";
+	        for (int i=0; i<commerceDataList.size(); i++) {
+	        	
+	        	ECommerceData referencia = commerceDataList.get(i);
+	        	
+	        	
+	            if (referencia.getInvoiceNo().equals(invoiceNo)) {
+
+	                recibo += referencia + "\n";
+	            }
+	        }
+
+	        return recibo;
+		}
+		
+		// Este metodo permite calcular la cantidad de unidades vendidas para un stock solicitado
+		public int BuscarStocke(String stockCode) {
+
+	        int num = 0;
+
+	        for (int i = 0; i < commerceDataList.size(); i++) {
+	        	ECommerceData referencia = commerceDataList.get(i);
+	            if (referencia.getStockCode().equalsIgnoreCase(stockCode)) {
+	                num += Integer.parseInt(referencia.getQuantity());
+	            }
+	        }
+
+	        return num;
+	    }
+
 
 	public ArrayList<ECommerceData> getCommerceDataList() {
 		return commerceDataList;
