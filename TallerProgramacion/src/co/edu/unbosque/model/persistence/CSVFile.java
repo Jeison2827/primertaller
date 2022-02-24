@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVFile {
-	private ArrayList<ECommerceData> commerceDataList;
+	public ArrayList<ECommerceData> commerceDataList;
 
 	public CSVFile(String path) {
 		commerceDataList = new ArrayList<>();
@@ -34,9 +34,9 @@ public class CSVFile {
 					String invoiceNo = currentLine[0];
 					String stockCode = currentLine[1];
 					String description = currentLine[2];
-					int quantity = Integer.parseInt(currentLine[3]);
+					String quantity = currentLine[3];
 					String invoiceDate = currentLine[4];
-					float unitPrice = Float.parseFloat(currentLine[5]);
+					String unitPrice = currentLine[5];
 					String customerId = currentLine[6];
 					String country = currentLine[7];
 					ECommerceData data = new ECommerceData(invoiceNo, stockCode, description, quantity, invoiceDate,
@@ -50,6 +50,26 @@ public class CSVFile {
 		} catch(Exception ex) {
 			ex.printStackTrace();
 		}
+	}
+		public double SumaTotales() {
+
+
+	        double Total = 0;
+	        for (int i=0; i<commerceDataList.size();i++) {
+
+	        	ECommerceData aux = commerceDataList.get(i);
+	            double cantidad = Double.parseDouble(aux.getQuantity()) ;
+	            double precio = Double.parseDouble(aux.getUnitPrice());
+
+
+
+	            double numero = cantidad * precio;
+	            Total += numero;
+	        }
+
+	        return Total;
+
+		
 	}
 
 	public ArrayList<ECommerceData> getCommerceDataList() {

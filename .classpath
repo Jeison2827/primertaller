@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="TallerProgramacion/src"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/commons-lang3-3.6.jar"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/commons-text-1.1.jar"/>
+	<classpathentry kind="lib" path="TallerProgramacion/libraries/opencsv-4.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
