@@ -26,16 +26,18 @@ public class Controller {
 			System.out.println(data);*/
 		
 		
+		
+		// Imprime por pantalla el metodo SumaTotales con su debida respuesa
 		System.out.println("LAS VENTAS TOTALES SON:  "+csvFile.SumaTotales() + "\n" + "\n" + "\n");
 		
 		
-		
+		//Solicita numero e imprime el metodo de BuscarRecibo con su infomacion solicitada
 		System.out.println("INGRESE EL NUMERO DEL RECIBO: ");
 		String referencia = sc.next();
 		System.out.println(csvFile.BuscarRecibo(referencia)+ "\n" + "\n" + "\n");
 		
 		
-		
+		//Solicita numero del stock e imprime el numero de productos por stock
 		System.out.println("INGRESE EL NUMERO DEL STOCK DESEADO: ");
 		String referencia2 = sc.next();
 		System.out.println("El numero de productos con el Stock deseado es: " + csvFile.BuscarStocke(referencia2));

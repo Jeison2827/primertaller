@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import co.edu.unbosque.model.persistence.CSVFile;
 
+// Esto inicializa las variables para la clase 
 public class ECommerceData {
 
 	private String invoiceNo;
@@ -19,7 +20,7 @@ public class ECommerceData {
 
 	
 
-	
+	// Este metodo permite generar el objeto producto
 	public ECommerceData(String invoiceNo, String stockCode, String description, String quantity2, String invoiceDate,
 			String unitPrice2, String customerID, String country) {
 
@@ -35,7 +36,7 @@ public class ECommerceData {
 		
 	}
 	
-
+// Estos son los getters y setters
 	public String getInvoiceNo() {
 		return invoiceNo;
 	}
